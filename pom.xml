@@ -16,6 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd_HH-mm-ss</maven.build.timestamp.format>
 		<openpnp.version>${maven.build.timestamp}.${buildNumber}</openpnp.version>
+		<skipTests>true</skipTests>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -395,6 +396,7 @@
 				<configuration>
 					<argLine>-Xmx512m</argLine>
 					<trimStackTrace>false</trimStackTrace>
+					<skipTests>${skipTests}</skipTests>
 				</configuration>
 			</plugin>
 
