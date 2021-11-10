@@ -15,6 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd_HH-mm-ss</maven.build.timestamp.format>
 		<openpnp.version>${maven.build.timestamp}.${buildNumber}</openpnp.version>
+		<skipTests>true</skipTests>
 	</properties>
 	<dependencies>
         <dependency>
@@ -430,6 +431,7 @@
 				<version>2.22.2</version>
 				<configuration>
 					<argLine>-Xmx1024m -XX:+UnlockDiagnosticVMOptions -XX:GCLockerRetryAllocationCount=100 --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.color=ALL-UNNAMED</argLine>
+					<skipTests>${skipTests}</skipTests>
 				</configuration>
 			</plugin>
 
