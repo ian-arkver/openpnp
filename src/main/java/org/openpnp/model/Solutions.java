@@ -53,8 +53,12 @@ import org.openpnp.spi.Machine;
 import org.openpnp.spi.PropertySheetHolder;
 import org.openpnp.util.VisionUtils;
 import org.openpnp.util.XmlSerialize;
+import org.openpnp.vision.pipeline.stages.convert.ColorConverter;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.convert.Convert;
+
 
 public class Solutions extends AbstractTableModel {
 
@@ -241,6 +245,7 @@ public class Solutions extends AbstractTableModel {
         Solved(new Color(157, 255, 168)),
         Dismissed(new Color(220, 220, 220));
 
+        @Convert(ColorConverter.class)
         private Color color;
 
         State(Color color) {
