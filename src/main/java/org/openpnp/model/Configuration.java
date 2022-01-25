@@ -516,7 +516,7 @@ public class Configuration extends AbstractModelObject {
         Serializer serializer = createSerializer();
         // This write forces any errors that will appear to happen before we start writing to
         // the file, which keeps us from writing a partial configuration to the real file.
-        serializer.write(o, new ByteArrayOutputStream());
+        // serializer.write(o, new ByteArrayOutputStream());
         FileOutputStream out = new FileOutputStream(file);
         serializer.write(o, out);
         out.write('\n');
