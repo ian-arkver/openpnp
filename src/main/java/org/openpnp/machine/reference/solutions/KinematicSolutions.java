@@ -438,7 +438,7 @@ public class KinematicSolutions implements Solutions.Subject {
                                                 + hm.getClass().getSimpleName()+" "+hm.getName()+" to do so.</p><br/>"
                                                 + "<p>If the axis has a limit switch, use a position close to it but still safe "
                                                 + "to not trigger the switch by accident.</p><br/>"
-                                                + "<p>Then press Accept to capture the lower soft limit.</p>"
+                                                + "<p>Then press Accept to capture the soft limit.</p>"
                                                 + "</html>";
                                     }
 
