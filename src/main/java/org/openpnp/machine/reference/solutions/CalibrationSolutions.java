@@ -694,13 +694,13 @@ public class CalibrationSolutions implements Solutions.Subject {
                 double t1 = NanosecondTime.getRuntimeSeconds();
                 double effSpeed = dtBaseline/(t1-t0);
                 speedGraph.getRow(VELOCITY, VELOCITY+0).recordDataPoint(speed, effSpeed);
-                if (speed == minimumSpeed) {
-                    if (effSpeed > Math.sqrt(speed)) {
-                        throw new Exception("Speed factor control seems not to be effective: "
-                                + "Should move at "+(int)(speed*100)+"%, but moved at "+(int)(effSpeed*100)+"%. "
-                                        + "Check your driver motion control and axis configuration (must use acceleration control).");
-                    }
-                }
+                // if (speed == minimumSpeed) {
+                //     if (effSpeed > Math.sqrt(speed)) {
+                //         throw new Exception("Speed factor control seems not to be effective: "
+                //                 + "Should move at "+(int)(speed*100)+"%, but moved at "+(int)(effSpeed*100)+"%. "
+                //                         + "Check your driver motion control and axis configuration (must use acceleration control).");
+                //     }
+                // }
             }
         }
 
